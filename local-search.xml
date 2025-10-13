@@ -4,25 +4,6 @@
   
   
   <entry>
-    <title>Markdown</title>
-    <link href="/2025/10/12/markdown/"/>
-    <url>/2025/10/12/markdown/</url>
-    
-    <content type="html"><![CDATA[<h2 id="markdown语法"><a class="anchor" href="#markdown语法">#</a> Markdown语法</h2><h4 id="一-添加头部"><a class="anchor" href="#一-添加头部">#</a> 一、添加头部</h4><p>在---后回车</p><h4 id="二-添加链接"><a class="anchor" href="#二-添加链接">#</a> 二、添加链接</h4><p>1.内部链接</p><p>[命名链接](链接地址)</p><p>示例：<a href="https://www.runoob.com/">菜鸟教程</a></p><p>2.引用链接</p><p>[命名链接][自定义名](正文使用)-[自定义名]:链接(文末)，建议多次使用链接时使用</p><p>示例：这是一个<a href="https://www.runoob.com/">菜鸟教程</a>，<a href="https://www.runoob.com/">菜鸟教程</a>可免费学习多种编程内容</p><p>3.自动链接</p><p>直接用尖括号包裹</p><p>示例：<a href="https://www.runoob.com/">https://www.runoob.com/</a></p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>-markdown</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>数据结构与算法</title>
     <link href="/2025/10/12/date_structure/"/>
     <url>/2025/10/12/date_structure/</url>
@@ -34,6 +15,25 @@
     <tags>
       
       <tag>-数据结构</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Markdown</title>
+    <link href="/2025/10/12/markdown/"/>
+    <url>/2025/10/12/markdown/</url>
+    
+    <content type="html"><![CDATA[<h2 id="markdown语法"><a class="anchor" href="#markdown语法">#</a> Markdown语法</h2><h4 id="一-添加头部"><a class="anchor" href="#一-添加头部">#</a> 一、添加头部</h4><p>在---后回车</p><h4 id="二-添加链接"><a class="anchor" href="#二-添加链接">#</a> 二、添加链接</h4><p>1.内部链接</p><p>[命名链接](链接地址)</p><p>示例：<a href="https://www.runoob.com/">菜鸟教程</a></p><p>2.引用链接</p><p>[命名链接][自定义名](正文使用)-[自定义名]:链接(文末)，建议多次使用链接时使用</p><p>示例：这是一个<a href="https://www.runoob.com/">菜鸟教程</a>，<a href="https://www.runoob.com/">菜鸟教程</a>可免费学习多种编程内容</p><p>3.自动链接</p><p>直接用尖括号包裹</p><p>示例：<a href="https://www.runoob.com/">https://www.runoob.com/</a></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>-markdown</tag>
       
     </tags>
     
@@ -92,7 +92,7 @@
     <link href="/2025/09/28/HTML/"/>
     <url>/2025/09/28/HTML/</url>
     
-    <content type="html"><![CDATA[<h3 id="2025928"><a class="anchor" href="#2025928">#</a> 2025.9.28</h3><h4 id="1html框架"><a class="anchor" href="#1html框架">#</a> 1.HTML框架</h4><p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>菜鸟教程<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>我的第一个标题<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>我的第一个段落。<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure></p><h4 id="2html标题"><a class="anchor" href="#2html标题">#</a> 2.HTML标题</h4><p><code>&lt;h1&gt;&lt;/h1&gt;</code></p><p><code>&lt;h2&gt;&lt;h3&gt;&lt;h4&gt;&lt;h5&gt;&lt;h6&gt;</code></p><h4 id="3html段落"><a class="anchor" href="#3html段落">#</a> 3.HTML段落</h4><p><code>&lt;p&gt;&lt;/p&gt;</code></p><h4 id="4html链接"><a class="anchor" href="#4html链接">#</a> 4.HTML链接</h4><p><code>&lt;a href=&quot;网站网址&quot;&gt;&lt;/a&gt;</code></p><p>target: 链接打开方式</p><ul><li>_blank 新标签打开</li><li>_self    当前页面打开</li></ul><p>title: 悬停时显示提示文本</p><p>download: 点击链接下载文件</p><h4 id="5html图像"><a class="anchor" href="#5html图像">#</a> 5.HTML图像</h4><p><code>&lt;img src=&quot;图像路径(绝对/相对路径)&quot;&gt;</code></p><p>alt: 图片加载失败时显示</p><p>width/height: 图片的高度和宽度</p><p>title: 悬停时显示提示文本</p><p>loading: 控制图片加载时机</p><p>decoding: 控制图片解码方式</p><ol start="6"><li></li></ol>]]></content>
+    <content type="html"><![CDATA[<h3 id="2025928"><a class="anchor" href="#2025928">#</a> 2025.9.28</h3><h4 id="1html框架"><a class="anchor" href="#1html框架">#</a> 1.HTML框架</h4><p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>菜鸟教程<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>我的第一个标题<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>我的第一个段落。<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure></p><h4 id="2html标题"><a class="anchor" href="#2html标题">#</a> 2.HTML标题</h4><p><code>&lt;h1&gt;&lt;/h1&gt;</code></p><p><code>&lt;h2&gt;&lt;h3&gt;&lt;h4&gt;&lt;h5&gt;&lt;h6&gt;</code></p><h4 id="3html段落"><a class="anchor" href="#3html段落">#</a> 3.HTML段落</h4><p><code>&lt;p&gt;&lt;/p&gt;</code></p><h4 id="4html链接"><a class="anchor" href="#4html链接">#</a> 4.HTML链接</h4><p><code>&lt;a href=&quot;网站网址&quot;&gt;&lt;/a&gt;</code></p><p>target: 链接打开方式</p><ul><li>_blank 新标签打开</li><li>_self    当前页面打开</li></ul><p>title: 悬停时显示提示文本</p><p>download: 点击链接下载文件</p><h4 id="5html图像"><a class="anchor" href="#5html图像">#</a> 5.HTML图像</h4><p><code>&lt;img src=&quot;图像路径(绝对/相对路径)&quot;&gt;</code></p><p>alt: 图片加载失败时显示</p><p>width/height: 图片的高度和宽度</p><p>title: 悬停时显示提示文本</p><p>loading: 控制图片加载时机</p><p>decoding: 控制图片解码方式</p><ol start="6"><li></li><li></li><li></li></ol>]]></content>
     
     
     <categories>
