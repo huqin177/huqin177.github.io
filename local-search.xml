@@ -8,7 +8,7 @@
     <link href="/2025/10/12/date_structure/"/>
     <url>/2025/10/12/date_structure/</url>
     
-    <content type="html"><![CDATA[<h5 id="前言学习内容来源浙大陈越-何钦铭老师"><a class="anchor" href="#前言学习内容来源浙大陈越-何钦铭老师">#</a> #前言：学习内容来源浙大陈越、何钦铭老师</h5><h4 id="一-什么是数据结构"><a class="anchor" href="#一-什么是数据结构">#</a> 一、什么是数据结构</h4><ul><li>数据对象在计算机中的组织方式</li><li>数据对象必定与一系列加在其上的操作相关联</li><li>完成这些操作所用的方法就是算法</li></ul><h4 id="二-什么是算法"><a class="anchor" href="#二-什么是算法">#</a> 二、什么是算法</h4><ul><li>一个有限指令集</li><li>接受一下输入，有些情况下不需要</li><li>产生输出</li><li>一定在有限步骤后终止</li><li>每一条指令必须</li><li><ul><li>有充分明确的目标</li><li>计算机能处理的范围之内</li><li>描述应不依赖于任何一种计算机语言以及集体的实现手段</li></ul></li></ul><h4 id="三-什么是好的算法"><a class="anchor" href="#三-什么是好的算法">#</a> 三、什么是好的算法</h4><ul><li>空间复杂度--占用存储单元的长度</li><li>时间复杂度--耗费时间长度</li></ul><h4 id="四-线性表"><a class="anchor" href="#四-线性表">#</a> 四、线性表</h4><p>感想：学了一点点之后，发现C语言的结构体和指针已经忘完了我，妈的，好想回到大一去骂自己一顿，你以前倒是耍好了，苦的是现在的你啊（哭哭哭）。</p><h5 id="一-顺序结构存储顺序表和链式结构存储链表"><a class="anchor" href="#一-顺序结构存储顺序表和链式结构存储链表">#</a> 一、顺序结构存储(顺序表)和链式结构存储(链表)</h5><p>心累了，做三个题错三个</p><p>![](C:\Users\user\Pictures\Screenshots\屏幕截图 2025-10-22 001256.png)</p><h6 id="顺序存储"><a class="anchor" href="#顺序存储">#</a> 顺序存储：</h6><p>一、特点：</p><ol><li>存储密度大</li><li>具有随机访问的特点</li><li>插入、删除的效率较低</li><li>需要预先分配存储空间</li><li>第 i 个元素存储于第 i-1 的物理位置</li><li>所有元素都可以进行存取</li></ol><p>&lt;img src=&quot;C:\Users\user\Pictures\Screenshots\屏幕截图 2025-10-22 162840.png&quot; alt=&quot;width=12&quot; style=&quot;zoom:45%;&quot; /&gt;</p><h6 id="链式存储动态链表和静态链表"><a class="anchor" href="#链式存储动态链表和静态链表">#</a> 链式存储(动态链表和静态链表)：</h6><p>一、特点：</p><ol><li>需要额外的空间存储指针域</li><li>不具有随机访问的特点</li><li>插入、删除的效率较高</li><li>不需要预先分配存储空间</li><li>链表中存在节点Node，<strong>n 个结点链结成了一个链表</strong>(链表中的每个数据元素 ai，既要存储本身信息，也要存储后继信息，这两部分组成的数据元素 ai 称为结点（node))</li><li>一个节点有两个域(数据域和指针域)</li></ol><p>二、头指针与头结点</p><p>1.头指针</p><p>2.头结点</p><h4 id="五-结构体"><a class="anchor" href="#五-结构体">#</a> 五、结构体</h4><h4 id="六-指针"><a class="anchor" href="#六-指针">#</a> 六、指针</h4><p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span> <span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>   <span class="hljs-type">int</span>  var = <span class="hljs-number">20</span>;   <span class="hljs-comment">/* 实际变量的声明 */</span><br>   <span class="hljs-type">int</span>  *ip;        <span class="hljs-comment">/* 指针变量的声明 */</span><br>   ip = &amp;var;  <span class="hljs-comment">/* 在指针变量中存储 var 的地址 */</span><br>   <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;var 变量的地址: %p\n&quot;</span>, &amp;var  );<br>   <span class="hljs-comment">/* 在指针变量中存储的地址 */</span><br>   <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;ip 变量存储的地址: %p\n&quot;</span>, ip );<br>   <span class="hljs-comment">/* 使用指针访问值 */</span><br>   <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;*ip 变量的值: %d\n&quot;</span>, *ip );<br>   <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure></p><p>当指针指向一个数组时，若无取地址符号&amp;，默认指向数组第一个元素，</p><p>指针指向数组的最后一个元素</p><p><figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs autoit"><span class="hljs-built_in">int</span> *<span class="hljs-built_in">ptr</span> = &amp;arr[<span class="hljs-number">4</span>]<span class="hljs-comment">;</span><br></code></pre></td></tr></table></figure></p><p>八、顺序存储结构和链式存储结构</p><p>心累了，做三个题错三个</p><p>![](C:\Users\user\Pictures\Screenshots\屏幕截图 2025-10-22 001256.png)</p><p>顺序存储特点：</p><ol><li>存储密度大</li><li>具有随机访问的特点</li><li>插入、删除的效率较低</li><li>需要预先分配存储空间</li></ol><p>链式存储特点：</p><ol><li>需要额外的空间存储指针域</li><li>不具有随机访问的特点</li><li>插入、删除的效率较高</li><li>不需要预先分配存储空间</li></ol>]]></content>
+    <content type="html"><![CDATA[<h4 id="一-什么是数据结构"><a class="anchor" href="#一-什么是数据结构">#</a> 一、什么是数据结构</h4><ul><li>数据对象在计算机中的组织方式</li><li>数据对象必定与一系列加在其上的操作相关联</li><li>完成这些操作所用的方法就是算法</li></ul><h4 id="二-什么是算法"><a class="anchor" href="#二-什么是算法">#</a> 二、什么是算法</h4><ul><li>一个有限指令集</li><li>接受一下输入，有些情况下不需要</li><li>产生输出</li><li>一定在有限步骤后终止</li><li>每一条指令必须</li><li><ul><li>有充分明确的目标</li><li>计算机能处理的范围之内</li><li>描述应不依赖于任何一种计算机语言以及集体的实现手段</li></ul></li></ul><h4 id="三-什么是好的算法"><a class="anchor" href="#三-什么是好的算法">#</a> 三、什么是好的算法</h4><ul><li>空间复杂度--占用存储单元的长度</li><li>时间复杂度--耗费时间长度</li></ul><h4 id="四-线性表"><a class="anchor" href="#四-线性表">#</a> 四、线性表</h4><h5 id="一-顺序结构存储顺序表和链式结构存储链表"><a class="anchor" href="#一-顺序结构存储顺序表和链式结构存储链表">#</a> 一、顺序结构存储(顺序表)和链式结构存储(链表)</h5><p>![](C:\Users\user\Pictures\Screenshots\屏幕截图 2025-10-22 001256.png)</p><h6 id="顺序存储"><a class="anchor" href="#顺序存储">#</a> 顺序存储：</h6><p>一、特点：</p><ol><li>存储密度大</li><li>具有随机访问的特点</li><li>插入、删除的效率较低</li><li>需要预先分配存储空间</li><li>第 i 个元素存储于第 i-1 的物理位置</li><li>所有元素都可以进行存取</li></ol><p>&lt;img src=&quot;C:\Users\user\Pictures\Screenshots\屏幕截图 2025-10-22 162840.png&quot; alt=&quot;width=12&quot; style=&quot;zoom:45%;&quot; /&gt;</p><h6 id="链式存储动态链表和静态链表"><a class="anchor" href="#链式存储动态链表和静态链表">#</a> 链式存储(动态链表和静态链表)：</h6><p>一、特点：</p><ol><li>需要额外的空间存储指针域</li><li>不具有随机访问的特点</li><li>插入、删除的效率较高</li><li>不需要预先分配存储空间</li><li>链表中存在节点Node，<strong>n 个结点链结成了一个链表</strong>(链表中的每个数据元素 ai，既要存储本身信息，也要存储后继信息，这两部分组成的数据元素 ai 称为结点（node))</li><li>一个节点有两个域(数据域和指针域)</li></ol><p>二、头指针与头结点</p><p>1.头指针</p><p>2.头结点</p><h4 id="五-结构体"><a class="anchor" href="#五-结构体">#</a> 五、结构体</h4><h4 id="六-指针"><a class="anchor" href="#六-指针">#</a> 六、指针</h4><p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span> <span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>   <span class="hljs-type">int</span>  var = <span class="hljs-number">20</span>;   <span class="hljs-comment">/* 实际变量的声明 */</span><br>   <span class="hljs-type">int</span>  *ip;        <span class="hljs-comment">/* 指针变量的声明 */</span><br>   ip = &amp;var;  <span class="hljs-comment">/* 在指针变量中存储 var 的地址 */</span><br>   <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;var 变量的地址: %p\n&quot;</span>, &amp;var  );<br>   <span class="hljs-comment">/* 在指针变量中存储的地址 */</span><br>   <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;ip 变量存储的地址: %p\n&quot;</span>, ip );<br>   <span class="hljs-comment">/* 使用指针访问值 */</span><br>   <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;*ip 变量的值: %d\n&quot;</span>, *ip );<br>   <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure></p><p>当指针指向一个数组时，若无取地址符号&amp;，默认指向数组第一个元素，</p><p>指针指向数组的最后一个元素</p><p><figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs autoit"><span class="hljs-built_in">int</span> *<span class="hljs-built_in">ptr</span> = &amp;arr[<span class="hljs-number">4</span>]<span class="hljs-comment">;</span><br></code></pre></td></tr></table></figure></p><p>八、顺序存储结构和链式存储结构</p><p>心累了，做三个题错三个</p><p>![](C:\Users\user\Pictures\Screenshots\屏幕截图 2025-10-22 001256.png)</p><p>顺序存储特点：</p><ol><li>存储密度大</li><li>具有随机访问的特点</li><li>插入、删除的效率较低</li><li>需要预先分配存储空间</li></ol><p>链式存储特点：</p><ol><li>需要额外的空间存储指针域</li><li>不具有随机访问的特点</li><li>插入、删除的效率较高</li><li>不需要预先分配存储空间</li></ol>]]></content>
     
     
     
@@ -62,10 +62,10 @@
   
   <entry>
     <title>github和hexo</title>
-    <link href="/2025/09/29/%E8%AE%A4%E8%AF%86github%E5%92%8C%E6%94%B9%E5%96%84hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/"/>
-    <url>/2025/09/29/%E8%AE%A4%E8%AF%86github%E5%92%8C%E6%94%B9%E5%96%84hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98/</url>
+    <link href="/2025/09/29/github.hexo/"/>
+    <url>/2025/09/29/github.hexo/</url>
     
-    <content type="html"><![CDATA[<h3 id="github"><a class="anchor" href="#github">#</a> GitHub</h3><p>一、.github干什么的？</p><p>1.豆包是这样说的</p><p><code>.github</code> 文件夹的核心规则可以总结为：<strong>“按 GitHub 约定的「文件名 / 目录结构」存放「特定格式」的文件，才能触发对应的功能”</strong>。具体规则可分为 <strong>“位置规则”</strong> 和 <strong>“内容规则”</strong> 两类，掌握这两类规则就能正确使用 <code>.github</code> 文件夹。</p><p>2.在我看来</p><p>就是给你一个固定的模板，然后你可以在文件夹的最里层写一个你自己命名的文件（有固定后缀的）</p><h2 id="hexo"><a class="anchor" href="#hexo">#</a> hexo</h2><p>一、用markdown写博客文章时出现头文件下无法写字情况</p><p>在正文前加#号</p><p>二、博客主题</p><p>千选万选，最终定为shoka主题，这个作者包是二次元哈哈哈哈哈，非常之好看的主题啊，十分推荐，背景设置为最喜欢的二次元角色和番剧，才有更加强的动力去学习，不行了，那个主题转站了，现在改名为shokax，改了好久图片也显示不全，换成了fluid。</p><p>三、VScode</p><p>代码内搜索:ctrl+F</p><p>全局搜索：ctrl+shift+F</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="hexo"><a class="anchor" href="#hexo">#</a> hexo</h2><p>一、用markdown写博客文章时出现头文件下无法写字情况</p><p>在正文前加#号</p><p>二、博客主题</p><p>fluid</p><h2 id="vscode"><a class="anchor" href="#vscode">#</a> VScode</h2><p>代码内搜索:ctrl+F</p><p>全局搜索：ctrl+shift+F</p>]]></content>
     
     
     <categories>
@@ -80,6 +80,8 @@
       <tag>github</tag>
       
       <tag>hexo</tag>
+      
+      <tag>VScode</tag>
       
     </tags>
     
@@ -101,25 +103,6 @@
       
     </categories>
     
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>简单记录一下碎碎念和生活</title>
-    <link href="/2025/09/21/everyday/"/>
-    <url>/2025/09/21/everyday/</url>
-    
-    <content type="html"><![CDATA[<h2 id="2025921"><a class="anchor" href="#2025921">#</a> 2025.9.21</h2><p>今天看了一位山科的同学的GitHub文章，对计算机的学习又有了一点点想法，需要学习的东西太多太多了，课堂上学不了多少，只能让我们知道有这个东西，很多有用的东西都是在课堂之外学会的，所以想简单记录一下学习的过程，用自己的博客，希望以后的人有帮助，也希望我能越学越多，越学越好，越写越棒。</p><h2 id="2025928"><a class="anchor" href="#2025928">#</a> 2025.9.28</h2><p>好难啊，代码在博客文章上被转义，代码没有显示高亮，没有太好的排版，各种css板块把我给弄懵了，好不容易才搭出来一个博客网站，暂时只修改了简单信息，以及文字显示换行，而不是显示一排。问ai也不太能行，继续改善吧。</p><h2 id="2025929"><a class="anchor" href="#2025929">#</a> 2025.9.29</h2><p>重新过了一遍HTML，但是仍觉得有很多记不住的地方，也不知道这对后续的学习有没有影响，还有就是啊，hexo博客你的排版怎么怎么奇怪呢，这我后面的学习还是有很大影响的，毕竟我可是追求完美的女人嘛，求求自己了，一定要弄好啊，不然根本没学习的劲头。</p>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>日记</tag>
-      
-    </tags>
     
   </entry>
   
