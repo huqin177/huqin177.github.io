@@ -28,53 +28,5 @@
   
   
   
-  <entry>
-    <title>github和hexo</title>
-    <link href="/2025/09/29/github.hexo/"/>
-    <url>/2025/09/29/github.hexo/</url>
-    
-    <content type="html"><![CDATA[<h2 id="hexo"><a class="anchor" href="#hexo">#</a> hexo</h2><p>一、用markdown写博客文章时出现头文件下无法写字情况</p><p>在正文前加#号</p><p>二、博客主题</p><p>fluid</p><h2 id="vscode"><a class="anchor" href="#vscode">#</a> VScode</h2><p>代码内搜索:ctrl+F</p><p>全局搜索：ctrl+shift+F</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>博客</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>github</tag>
-      
-      <tag>hexo</tag>
-      
-      <tag>VScode</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>HTML历程</title>
-    <link href="/2025/09/28/HTML/"/>
-    <url>/2025/09/28/HTML/</url>
-    
-    <content type="html"><![CDATA[<h3 id="2025928"><a class="anchor" href="#2025928">#</a> 2025.9.28</h3><h4 id="1html框架"><a class="anchor" href="#1html框架">#</a> 1.HTML框架</h4><p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;utf-8&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>菜鸟教程<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>我的第一个标题<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>我的第一个段落。<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure></p><h4 id="2html标题"><a class="anchor" href="#2html标题">#</a> 2.HTML标题</h4><p><code>&lt;h1&gt;&lt;/h1&gt;</code></p><p><code>&lt;h2&gt;&lt;h3&gt;&lt;h4&gt;&lt;h5&gt;&lt;h6&gt;</code></p><h4 id="3html段落"><a class="anchor" href="#3html段落">#</a> 3.HTML段落</h4><p><code>&lt;p&gt;&lt;/p&gt;</code></p><h4 id="4html链接"><a class="anchor" href="#4html链接">#</a> 4.HTML链接</h4><p><code>&lt;a href=&quot;网站网址&quot;&gt;&lt;/a&gt;</code></p><p>target: 链接打开方式</p><ul><li>_blank 新标签打开</li><li>_self    当前页面打开</li></ul><p>title: 悬停时显示提示文本</p><p>download: 点击链接下载文件</p><h4 id="5html图像"><a class="anchor" href="#5html图像">#</a> 5.HTML图像</h4><p><code>&lt;img src=&quot;图像路径(绝对/相对路径)&quot;&gt;</code></p><p>alt: 图片加载失败时显示</p><p>width/height: 图片的高度和宽度</p><p>title: 悬停时显示提示文本</p><p>loading: 控制图片加载时机</p><p>decoding: 控制图片解码方式</p><ol start="6"><li></li><li></li><li></li></ol>]]></content>
-    
-    
-    <categories>
-      
-      <category>前端</category>
-      
-    </categories>
-    
-    
-  </entry>
-  
-  
-  
   
 </search>
