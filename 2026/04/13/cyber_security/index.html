@@ -27,7 +27,7 @@
 <meta property="og:description" content="# python学习 # 第一章 基本数据类型 1、字符串 引号包括单引号 &#39; &#39; ，双引号 &quot; &quot; 和 三引号 &#39;&#39;&#39; &#39;&#39;&#39; 在需要打印的文字中含有引号时，需要用其它引号来包括或者转义字符\，否则会报错 123# 字符串里有双引号，外层用单引号或三引号quote&#x3D;&#x27;他说：&quot;Python 真好玩！&quot;&#x27;print(quote) 1输出：他">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-04-12T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-08-29T12:10:23.621Z">
+<meta property="article:modified_time" content="2026-08-30T13:10:53.123Z">
 <meta property="article:author" content="hexi">
 <meta property="article:tag" content="安全">
 <meta name="twitter:card" content="summary_large_image">
@@ -223,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          4.6k 字
+          5.7k 字
         
       </span>
     
@@ -234,7 +234,7 @@
         
         
         
-          39 分钟
+          48 分钟
         
       </span>
     
@@ -810,6 +810,77 @@
 <p>输出：</p>
 <p><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs basic"><span class="hljs-symbol">0 </span><span class="hljs-number">0</span><br><span class="hljs-symbol">0 </span><span class="hljs-number">1</span><br><span class="hljs-symbol">1 </span><span class="hljs-number">0</span><br><span class="hljs-symbol">1 </span><span class="hljs-number">1</span><br><span class="hljs-symbol">2 </span><span class="hljs-number">0</span><br><span class="hljs-symbol">2 </span><span class="hljs-number">1</span><br></code></pre></td></tr></table></figure></p>
 <h3 id="第八章-函数"><a class="anchor" href="#第八章-函数">#</a> 第八章 函数</h3>
+<p>函数就是组织好的、可重复使用的、用来实现单一或相关联功能的<strong>代码段</strong>。</p>
+<p>1、自定义函数</p>
+<p>（1）函数的组成</p>
+<p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">函数名</span>(<span class="hljs-params">参数<span class="hljs-number">1</span>, 参数<span class="hljs-number">2</span>, ...</span>):<br>    函数体<br>    <span class="hljs-keyword">return</span> 表达式<br></code></pre></td></tr></table></figure></p>
+<p>自定义函数的规则：</p>
+<ul>
+<li>用 <code>def</code> 关键字开头，后接函数名和圆括号 <code>()</code></li>
+<li>任何参数放在圆括号中间</li>
+<li>函数内容<strong>冒号 + 缩进</strong>起始（跟 if、for 一样）</li>
+<li><code>return 表达式</code> 结束函数，并把值返回给调用方</li>
+<li>不带表达式的 <code>return</code> 相当于返回 <code>None</code></li>
+</ul>
+<p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs routeros">def <span class="hljs-built_in">add</span>(num1, num2):<br>    return num1 + num2<br><br><span class="hljs-comment"># 调用</span><br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">add</span>(5, 6))<br></code></pre></td></tr></table></figure></p>
+<p>输出：</p>
+<p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">11<br></code></pre></td></tr></table></figure></p>
+<p>2、为什么要用函数</p>
+<p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-comment"># 不用函数：每次都要重复写</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;一点水的成绩：及格&#x27;</span> <span class="hljs-keyword">if</span> 75 &gt;= 60 <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;一点水的成绩：不及格&#x27;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;两点水的成绩：及格&#x27;</span> <span class="hljs-keyword">if</span> 88 &gt;= 60 <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;两点水的成绩：不及格&#x27;</span>)<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;三点水的成绩：及格&#x27;</span> <span class="hljs-keyword">if</span> 50 &gt;= 60 <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;三点水的成绩：不及格&#x27;</span>)<br></code></pre></td></tr></table></figure></p>
+<p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 用函数：定义一次，反复用</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">report</span>(<span class="hljs-params">name, score</span>):<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&quot;<span class="hljs-subst">&#123;name&#125;</span>的成绩：<span class="hljs-subst">&#123;<span class="hljs-string">&#x27;及格&#x27;</span> <span class="hljs-keyword">if</span> score &gt;= <span class="hljs-number">60</span> <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;不及格&#x27;</span>&#125;</span>&quot;</span>)<br><br>report(<span class="hljs-string">&#x27;一点水&#x27;</span>, <span class="hljs-number">75</span>)<br>report(<span class="hljs-string">&#x27;两点水&#x27;</span>, <span class="hljs-number">88</span>)<br>report(<span class="hljs-string">&#x27;三点水&#x27;</span>, <span class="hljs-number">50</span>)<br></code></pre></td></tr></table></figure></p>
+<p>2、函数返回值</p>
+<p><code>return</code> 语句用于退出函数，并向调用方<strong>返回一个值</strong>。</p>
+<p>不带值的 <code>return</code> 等同于返回 <code>None</code>。</p>
+<p>函数也可以返回多个值</p>
+<p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">division</span>(<span class="hljs-params">num1, num2</span>):<br>    <span class="hljs-string">&quot;&quot;&quot;求商与余数&quot;&quot;&quot;</span><br>    a = num1 % num2<br>    b = (num1 - a) / num2<br>    <span class="hljs-keyword">return</span> b, a<br>quotient, remainder = division(<span class="hljs-number">9</span>, <span class="hljs-number">4</span>)<br><span class="hljs-built_in">print</span>(quotient, remainder)<br>t = division(<span class="hljs-number">9</span>, <span class="hljs-number">4</span>)<br><span class="hljs-built_in">print</span>(t)<br></code></pre></td></tr></table></figure></p>
+<p>输出：</p>
+<p><figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs clojure"><span class="hljs-number">2.0</span> <span class="hljs-number">1</span><br>(<span class="hljs-number">2.0</span><span class="hljs-punctuation">,</span> <span class="hljs-number">1</span>)<br></code></pre></td></tr></table></figure></p>
+<p>观察一下——函数 <code>return b, a</code> 实际上是返回了一个<strong>元组（tuple）</strong><code>(b, a)</code>，调用方可以直接「解包」赋给两个变量，也可以整个拿到一个 tuple。</p>
+<blockquote>
+<p>「Python 一次接受多个返回值的数据类型就是元组。」这是相比其他语言的一个简便特性。</p>
+</blockquote>
+<p>3、函数的参数</p>
+<p>Python 函数对参数的支持非常灵活。这里讲三种最常用的：<strong>默认参数</strong>、<strong>关键字参数</strong>、<strong>不定长参数</strong>。</p>
+<p>（1）默认参数</p>
+<p>调用时可以不传，就用默认值。</p>
+<p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">greet</span>(<span class="hljs-params">name, greeting=<span class="hljs-string">&#x27;你好&#x27;</span></span>):<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;<span class="hljs-subst">&#123;greeting&#125;</span>, <span class="hljs-subst">&#123;name&#125;</span>!&#x27;</span>)<br><br>greet(<span class="hljs-string">&#x27;两点水&#x27;</span>)              <span class="hljs-comment"># 用默认值</span><br>greet(<span class="hljs-string">&#x27;两点水&#x27;</span>, <span class="hljs-string">&#x27;早上好&#x27;</span>)    <span class="hljs-comment"># 覆盖默认值</span><br></code></pre></td></tr></table></figure></p>
+<p>输出：</p>
+<p><figure class="highlight erlang-repl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs erlang-repl">你好, 两点水!<br>早上好, 两点水!<br></code></pre></td></tr></table></figure></p>
+<p><strong>默认值必须是不可变对象</strong>（数字 / 字符串 / None / tuple）。<strong>别用 list 或 dict 做默认值</strong>——会引发非常诡异的 bug。需要默认空 list 时用 <code>None</code> 替代：</p>
+<p>（2）关键字参数</p>
+<p>调用时按 <code>参数名=值</code> 的形式传，<strong>顺序就不重要了</strong>。</p>
+<p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs routeros">def <span class="hljs-built_in">info</span>(name, age, city):<br>    <span class="hljs-built_in">print</span>(f<span class="hljs-string">&#x27;&#123;name&#125;, &#123;age&#125; 岁, 来自 &#123;city&#125;&#x27;</span>)<br><br><span class="hljs-comment"># 按位置传：要严格按顺序</span><br><span class="hljs-built_in">info</span>(<span class="hljs-string">&#x27;两点水&#x27;</span>, 18, <span class="hljs-string">&#x27;广州&#x27;</span>)<br><br><span class="hljs-comment"># 按名字传：顺序无所谓</span><br><span class="hljs-built_in">info</span>(<span class="hljs-attribute">age</span>=18, <span class="hljs-attribute">city</span>=<span class="hljs-string">&#x27;广州&#x27;</span>, <span class="hljs-attribute">name</span>=<span class="hljs-string">&#x27;两点水&#x27;</span>)<br></code></pre></td></tr></table></figure></p>
+<p>两次输出一样。关键字参数让长参数列表的函数更易读。</p>
+<p>（3）不定长参数</p>
+<p>如果调用方传的参数个数不确定，用 <code>*args</code>（接收成 tuple）或 <code>**kwargs</code>（接收成 dict）。</p>
+<p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">def</span> sum_all(*nums):<br>    <span class="hljs-attribute">total</span> = <span class="hljs-number">0</span><br>    <span class="hljs-attribute">for</span> n in nums:<br>        <span class="hljs-attribute">total</span> = total + n<br>    <span class="hljs-attribute">return</span> total<br><br><span class="hljs-attribute">print</span>(sum_all(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>))<br><span class="hljs-attribute">print</span>(sum_all(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>))<br></code></pre></td></tr></table></figure></p>
+<p>输出：</p>
+<p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs">6<br>21<br></code></pre></td></tr></table></figure></p>
+<p><code>*nums</code> 把所有传入的参数收成一个 tuple，函数里就能用 for 遍历。</p>
+<p><code>**kwargs</code> 类似但收成 dict（少用，先跳过，后面真用到再深入）。</p>
+<p>4、匿名函数lambda</p>
+<p>过定义一个<strong>很短的回调函数</strong></p>
+<p>Python 用 <strong><code>lambda</code></strong> 创建匿名函数——一行表达式搞定。</p>
+<p>（1）基本语法</p>
+<p><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ruby"><span class="hljs-built_in">lambda</span> 参数: 表达式<br></code></pre></td></tr></table></figure></p>
+<p>例子：</p>
+<p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs stylus">add = lambda <span class="hljs-selector-tag">a</span>, <span class="hljs-selector-tag">b</span>: <span class="hljs-selector-tag">a</span> + <span class="hljs-selector-tag">b</span><br><span class="hljs-function"><span class="hljs-title">print</span><span class="hljs-params">(add(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>)</span></span>)<br></code></pre></td></tr></table></figure></p>
+<p>输出：</p>
+<p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">7<br></code></pre></td></tr></table></figure></p>
+<p>（2）匿名函数 vs 普通函数</p>
+<p><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver"><span class="hljs-comment"># 普通函数</span><br>def <span class="hljs-built_in">add</span>(<span class="hljs-keyword">a</span>, b):<br>    <span class="hljs-literal">return</span> <span class="hljs-keyword">a</span> + b<br><br><span class="hljs-comment"># 等价的 lambda</span><br><span class="hljs-built_in">add</span> = lambda <span class="hljs-keyword">a</span>, b: <span class="hljs-keyword">a</span> + b<br></code></pre></td></tr></table></figure></p>
+<p>两种写法效果完全一样。</p>
+<p>（3）适合lambda的场景</p>
+<p>lambda 最常见的用法是<strong>当作参数传给别的函数</strong>，比如 <code>sorted</code> 的 <code>key</code>：</p>
+<p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs routeros">users = [<br>    &#123;<span class="hljs-string">&#x27;name&#x27;</span>: <span class="hljs-string">&#x27;Alice&#x27;</span>, <span class="hljs-string">&#x27;age&#x27;</span>: 30&#125;,<br>    &#123;<span class="hljs-string">&#x27;name&#x27;</span>: <span class="hljs-string">&#x27;Bob&#x27;</span>, <span class="hljs-string">&#x27;age&#x27;</span>: 25&#125;,<br>    &#123;<span class="hljs-string">&#x27;name&#x27;</span>: <span class="hljs-string">&#x27;Carol&#x27;</span>, <span class="hljs-string">&#x27;age&#x27;</span>: 28&#125;,<br>]<br><br><span class="hljs-comment"># 按年龄排序——临时写个 lambda 当 key</span><br>sorted_users = sorted(users, <span class="hljs-attribute">key</span>=lambda u: u[<span class="hljs-string">&#x27;age&#x27;</span>])<br><br><span class="hljs-keyword">for</span> u <span class="hljs-keyword">in</span> sorted_users:<br>    <span class="hljs-built_in">print</span>(u[<span class="hljs-string">&#x27;name&#x27;</span>], u[<span class="hljs-string">&#x27;age&#x27;</span>])<br></code></pre></td></tr></table></figure></p>
+<p>输出：</p>
+<p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">Bob</span> <span class="hljs-number">25</span><br><span class="hljs-attribute">Carol</span> <span class="hljs-number">28</span><br><span class="hljs-attribute">Alice</span> <span class="hljs-number">30</span><br></code></pre></td></tr></table></figure></p>
+<p>lambda 的限制</p>
+<blockquote>
+<p>⚠️ lambda 表达式<strong>只能是一个表达式</strong>——不能写 if/else 多分支（虽然能写三元表达式）、不能写循环、不能写 return。</p>
+<p>如果逻辑稍复杂一点，老老实实用 <code>def</code>，不要硬塞进 lambda。</p>
+</blockquote>
+<h3 id="第九章-迭代"><a class="anchor" href="#第九章-迭代">#</a> 第九章  迭代</h3>
 
                 
               </div>
